@@ -3,13 +3,13 @@ import React from 'react'
 import ReactEcharts from "echarts-for-react";
 
 export const GraphComponent = (props) => {
-    const { xAxis, series, legend } = props;
+    const { xAxis, series, legend, title, vendor} = props;
     const option = {
         title : {
-            text: 'Average Watch time',
-            subtext: 'Vendor: newunicorn-vercel',
+            text: title,
+            subtext: `Vendor: ${vendor}`,
             x : 'center',
-            lineHeight: 56
+            lineHeight: 56,
         },
         tooltip: {
             trigger: 'axis'
